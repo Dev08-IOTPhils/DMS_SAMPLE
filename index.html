@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMS — Document Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark">DM</div>
+                <div>
+                    <div class="brand-text">DMS</div>
+
+                    <div class="brand-sub">Document</div>
+                    <div class="brand-sub">Management</div>
+                    <div class="brand-sub">System</div>
+                </div>
+            </div>
+            <nav class="nav" id="navRoot"></nav>
+            <div class="sidebar-foot"><span class="dot-live"></span> Version 1.0.0 - DMS</div>
+        </aside>
+
+        <div class="main">
+            <header class="topbar">
+                <button class="icon-btn" id="hamburgerBtn"><i class="fa-solid fa-bars"></i></button>
+                <div>
+                    <div class="topbar-title" id="topTitle">Operational</div>
+                    <div class="topbar-crumb" id="topCrumb">Dashboard</div>
+                </div>
+                <div class="search-wrap">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search documents, users, workflows…" id="globalSearch">
+                </div>
+                <div class="topbar-right">
+
+                    <div class="bell-wrap">
+                        <button class="icon-btn" id="bellBtn">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="bell-badge">8</span>
+                        </button>
+
+                        <div id="notificationDropdown" class="notification-dropdown hidden">
+                            <div class="notification-header">
+                                <h4>Notifications</h4>
+                            </div>
+
+                            <div class="notification-group">
+                                <div class="notification-group-title">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    Email Notifications
+                                </div>
+
+                                <div class="notification-item">
+                                    Contract CA-2026-089 has been emailed to Maria Santos.
+                                </div>
+
+                                <div class="notification-item">
+                                    Approval request sent to Finance Department.
+                                </div>
+                            </div>
+
+                            <div class="notification-group">
+                                <div class="notification-group-title">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    Due Date Reminders
+                                </div>
+
+                                <div class="notification-item">
+                                    Purchase Order #445 expires tomorrow.
+                                </div>
+
+                                <div class="notification-item">
+                                    Lease Agreement 2026-08 is due in 3 days.
+                                </div>
+                            </div>
+
+                            <div class="notification-group">
+                                <div class="notification-group-title">
+                                    <i class="fa-solid fa-repeat"></i>
+                                    Status Change Notifications
+                                </div>
+
+                                <div class="notification-item">
+                                    Contract CA-2026-089 changed from Pending Review to Approved.
+                                </div>
+
+                                <div class="notification-item">
+                                    Invoice INV-2026-1123 has been Filed.
+                                </div>
+                            </div>
+
+                            <div class="notification-group">
+                                <div class="notification-group-title">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                    Escalation Notifications
+                                </div>
+
+                                <div class="notification-item">
+                                    Travel Order TO-118 has exceeded SLA.
+                                </div>
+
+                                <div class="notification-item">
+                                    Memo Circular 404 escalated to Executive Office.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user-chip">
+                        <div class="avatar">SA</div>
+                        <div>
+                            <div class="user-name">Superadmin</div>
+                            <div class="user-role">DMS Administrator</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="content" id="content"></main>
+        </div>
+    </div>
+    <div id="modalRoot"></div>
+    <div class="toast-root" id="toastRoot"></div>
+
+    <script src="data.js"></script>
+
+</body>
+</html>
